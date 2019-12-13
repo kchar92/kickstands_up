@@ -1,0 +1,2 @@
+class RideStation < ApplicationRecord
+end
