@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# Ride.new(name: "Two Wheel Tuesday", date_time: DateTime.parse("01/07/20 05:00PM").strftime("%m-%e-%y %H:%M"), starting_point: "630 N. Kingsley Dr. Los Angeles, CA 90004", starting_point_lat: 34.082590, starting_point_long: -118.303240, end_point: "1000 Vin Scully Ave, Los Angeles, CA 90012", end_point_lat: 34.072578, end_point_long: -118.240288, ride_distance: 7.5, bike_type: "sport")
-# ride.save!
-# Ride.new(name: "Canyon Run", date_time: DateTime.parse("03/05/20 02:00PM").strftime("%m-%e-%y %H:%M"), starting_point: "630 N. Kingsley Dr. Los Angeles, CA 90004", starting_point_lat: 34.082590, starting_point_long: -118.303240, end_point: "8401 Mulholland Dr, Studio City, CA 91604", end_point_lat: 34.122580, end_point_long: -118.387090, ride_distance: 8.7, bike_type: "sport")
-# ride.save!
+Ride.create(name: "Two Wheel Tuesday", date_time: Time.new(2020, 2, 15, 17), starting_point: "630 N. Kingsley Dr. Los Angeles, CA 90004", starting_point_lat: 34.082590, starting_point_long: -118.303240, end_point: "1000 Vin Scully Ave, Los Angeles, CA 90012", end_point_lat: 34.072578, end_point_long: -118.240288, ride_distance: 7.5, bike_type: "any")
+Ride.create(name: "Canyon Run", date_time: Time.new(2020, 2, 15, 10), starting_point: "630 N. Kingsley Dr. Los Angeles, CA 90004", starting_point_lat: 34.082590, starting_point_long: -118.303240, end_point: "8401 Mulholland Dr, Studio City, CA 91604", end_point_lat: 34.122580, end_point_long: -118.387090, ride_distance: 8.7, bike_type: "sport")
+Ride.create(name: "Super Sunday", date_time: Time.new(2020, 5, 24, 9), starting_point: "5505 Rosemead Blvd. Temple City, CA 91780", starting_point_lat: 34.09925, starting_point_long: -118.07387, end_point: "24606 Santa Clara Ave, Dana Point, CA 92629", end_point_lat: 33.46387, end_point_long: -117.70162, ride_distance: 60.7, bike_type: "any")
+
 
 # Station.create(name: "Socal Nitrous & Race Fuels", street_address: "9723 Washburn Rd", city: "Downey", latitude: 33.924620, longitude: -118.113830, brand: "Gulf", octane: "98, 104, 116", phone_number: "562-862-9122")
 
