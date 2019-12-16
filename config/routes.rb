@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     get "/rides" => "rides#index"
     post "/rides" => "rides#create"
     get "/rides/:id" => "rides#show"
+    patch "/rides/:id" => "rides#update"
+    delete "/rides/:id" => "rides#destroy"
   end
 end

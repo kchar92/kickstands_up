@@ -1,4 +1,5 @@
 {
+  id: @ride.id,
   name: @ride.name,
   date_time: @ride.date_time,
   starting_point: @ride.starting_point,

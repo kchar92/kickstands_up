@@ -20,4 +20,18 @@ class Api::RidesController < ApplicationController
     @ride = Ride.find_by(id: params[:id])
     render 'show.json.jb'
   end
+  def update
+    @ride = Ride.find_by(id: params[:id])
+    @ride.name = params[:name] || @ride.name
+    @ride.starting_point = params[:starting_point] || @ride.starting_point
+    @ride.end_point = params[:end_point] || @ride.end_point
+    @ride.bike_type = params[:bike_type] || @ride.bike_type
+    # @ride.save
+    render 'show.json.jb'
+  end
+  def destroy
+    @ride = Ride.find_by(id: params[:id])
+    @ride.destroy
+    render 'destroy.json.jb'
+  end
 end
