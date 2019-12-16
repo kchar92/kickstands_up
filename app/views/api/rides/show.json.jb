@@ -1,0 +1,8 @@
+{
+  name: @ride.name,
+  date_time: @ride.date_time,
+  starting_point: @ride.starting_point,
+  end_point: @ride.end_point,
+  distance: @ride.ride_distance,
+  bike_type: @ride.bike_type
+}
