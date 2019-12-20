@@ -1,6 +1,10 @@
 class Api::RideUsersController < ApplicationController
-  def index
-    @ride_users = RideUser.where(user_id: current_user.id)
-    render 'index.json.jb'
+  def create
+    @ride_user = RideUser.new(
+      user_id: params[:user_id],
+      ride_id: params[:ride_id]
+    )
+    @ride_user.save
+    render 'show.json.jb'
   end
 end

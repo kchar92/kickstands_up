@@ -18,6 +18,6 @@ Rails.application.routes.draw do
     post "/sessions" => "sessions#create"
 
     #ride_users
-    get "ride_users" => "ride_users#index"
+    post "/ride_users" => "ride_users#create"
   end
 end

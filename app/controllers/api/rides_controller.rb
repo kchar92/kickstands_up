@@ -1,6 +1,10 @@
 class Api::RidesController < ApplicationController
   def index
-    @rides = Ride.all
+    if params[:attending] == "true"
+      @rides = current_user.rides
+    else
+      @rides = Ride.all - current_user.rides
+    end
     render 'index.json.jb'
   end
   def create

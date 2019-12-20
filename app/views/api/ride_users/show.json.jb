@@ -1,0 +1,4 @@
+{
+  user_id: @ride_user.user_id,
+  ride_id: @ride_user.ride_id
+}
