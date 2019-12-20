@@ -19,5 +19,8 @@ Rails.application.routes.draw do
 
     #ride_users
     post "/ride_users" => "ride_users#create"
+
+    #stations
+    get "/stations" => "stations#index"
   end
 end
