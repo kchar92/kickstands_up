@@ -1,0 +1,11 @@
+@ride_users.map do |ride_user|
+  {
+    user_id: ride_user.user_id,
+    name: ride_user.ride.name,
+    date_time: ride_user.ride.date_time,
+    starting_point: ride_user.ride.starting_point,
+    end_point: ride_user.ride.end_point,
+    distance: ride_user.ride.ride_distance,
+    bike_type: ride_user.ride.bike_type
+  }
+end

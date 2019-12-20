@@ -3,5 +3,5 @@ class Ride < ApplicationRecord
   has_many :users, through: :ride_users
   has_many :ride_stations
   has_many :stations, through: :ride_stations
-  has_many :comments 
+  has_many :comments
 end
