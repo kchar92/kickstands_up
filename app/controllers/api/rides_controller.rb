@@ -13,7 +13,7 @@ class Api::RidesController < ApplicationController
       ride_distance: params[:ride_distance],
       bike_type: params[:bike_type]
     )
-    # @ride.save
+    @ride.save
     render 'show.json.jb'
   end
   def show
@@ -26,7 +26,7 @@ class Api::RidesController < ApplicationController
     @ride.starting_point = params[:starting_point] || @ride.starting_point
     @ride.end_point = params[:end_point] || @ride.end_point
     @ride.bike_type = params[:bike_type] || @ride.bike_type
-    # @ride.save
+    @ride.save
     render 'show.json.jb'
   end
   def destroy
