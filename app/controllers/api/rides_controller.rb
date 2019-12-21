@@ -8,7 +8,6 @@ class Api::RidesController < ApplicationController
     render 'index.json.jb'
   end
   def create
-    # use geocoder to get lat and long from starting_point and end_point??
     @ride = Ride.new(
       name: params[:name],
       date_time: params[:date_time],
@@ -17,8 +16,11 @@ class Api::RidesController < ApplicationController
       ride_distance: params[:ride_distance],
       bike_type: params[:bike_type]
     )
-    @ride.save
-    render 'show.json.jb'
+    if @ride.save
+      render 'show.json.jb'
+    else
+      render json: { errors: @ride.errors.full_messages }, status: :unprocessable_entity
+    end
   end
   def show
     @ride = Ride.find_by(id: params[:id])
@@ -30,12 +32,15 @@ class Api::RidesController < ApplicationController
     @ride.starting_point = params[:starting_point] || @ride.starting_point
     @ride.end_point = params[:end_point] || @ride.end_point
     @ride.bike_type = params[:bike_type] || @ride.bike_type
-    @ride.save
-    render 'show.json.jb'
+    if @ride.save
+      render 'show.json.jb'
+    else
+      render json: { errors: @ride.errors.full_messages }, status: :unprocessable_entity
+    end
   end
   def destroy
-    @ride = Ride.find_by(id: params[:id])
-    @ride.destroy
-    render 'destroy.json.jb'
+    ride = Ride.find_by(id: params[:id])
+    ride.destroy
+    render json: {message: "Ride destroyed"}
   end
 end
