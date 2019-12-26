@@ -8,4 +8,12 @@ class Ride < ApplicationRecord
   def friendly_date_time
     date_time.strftime("%A, %d %b %Y %l:%M %p")
   end
+
+  def miles
+    if ride_distance == 1
+      return "#{ride_distance} mile"
+    else
+      return "#{ride_distance} miles"
+    end
+  end
 end

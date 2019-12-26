@@ -1,4 +1,4 @@
-class Api::RidesController < ApplicationController
+ class Api::RidesController < ApplicationController
   def index
     if params[:attending] == "true"
       @rides = current_user.rides

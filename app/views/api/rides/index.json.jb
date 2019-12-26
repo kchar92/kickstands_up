@@ -5,7 +5,7 @@
     date_time: ride.friendly_date_time,
     starting_point: ride.starting_point,
     ending_point: ride.end_point,
-    distance: ride.ride_distance,
+    distance: ride.miles,
     bike_type: ride.bike_type
   }
 end
