@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :ride_users
+  has_many :ride_users, dependent: :destroy
   has_many :rides, through: :ride_users
   has_many :comments
   has_secure_password
