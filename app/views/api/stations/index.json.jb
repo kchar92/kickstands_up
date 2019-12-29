@@ -3,6 +3,7 @@
     name: station.name,
     address: station.street_address,
     city: station.city,
+    state: station.state,
     brand: station.brand,
     octane: station.octane,
     phone_number: station.phone_number
