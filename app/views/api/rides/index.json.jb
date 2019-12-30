@@ -2,7 +2,7 @@
   {
     id: ride.id,
     ride: ride.name,
-    date_time: ride.date_time,
+    date_time: ride.friendly_date_time,
     starting_point: ride.starting_point,
     ending_point: ride.end_point,
     distance: ride.miles,

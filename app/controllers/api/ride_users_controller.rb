@@ -10,6 +10,6 @@ class Api::RideUsersController < ApplicationController
   # def destroy
   #   ride = Ride.find_by(id: params[:id])
   #   ride_user = RideUser.where(user_id: current_user.id, ride_id: ride.id)
-  #   @ride_user.destroy
+  #   ride_user.destroy
   # end
 end
