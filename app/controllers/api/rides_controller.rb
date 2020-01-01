@@ -33,11 +33,11 @@
       ride_distance: distance,
       bike_type: params[:bike_type]
     )
-    # if @ride.save
+    if @ride.save
       render 'show.json.jb'
-    # else
-    #   render json: { errors: @ride.errors.full_messages }, status: :unprocessable_entity
-    # end
+    else
+      render json: { errors: @ride.errors.full_messages }, status: :unprocessable_entity
+    end
   end
   def show
     @ride = Ride.find_by(id: params[:id])
