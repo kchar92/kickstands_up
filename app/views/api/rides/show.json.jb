@@ -3,7 +3,11 @@
   name: @ride.name,
   date_time: @ride.friendly_date_time,
   starting_point: @ride.starting_point,
+  starting_point_lat: @ride.starting_point_lat,
+  starting_point_long: @ride.starting_point_long,
   end_point: @ride.end_point,
+  end_point_lat: @ride.end_point_lat,
+  end_point_long: @ride.end_point_long,
   distance: @ride.miles,
   bike_type: @ride.bike_type
 }

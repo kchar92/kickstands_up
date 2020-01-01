@@ -8,11 +8,25 @@
     render 'index.json.jb'
   end
   def create
+    starting_point = params[:starting_point]
+    start_coordinates = Geocoder.coordinates(starting_point)
+    start_latitude = start_coordinates[0]
+    start_longitude = start_coordinates[1]
+
+    end_point = params[:end_point]
+    end_coordinates = Geocoder.coordinates(end_point)
+    end_latitude = end_coordinates[0]
+    end_longitude = end_coordinates[1]
+
     @ride = Ride.new(
       name: params[:name],
       date_time: params[:date_time],
       starting_point: params[:starting_point],
+      starting_point_lat: start_latitude,
+      starting_point_long: start_longitude,
       end_point: params[:end_point],
+      end_point_lat: end_latitude,
+      end_point_long: end_longitude,
       ride_distance: params[:ride_distance],
       bike_type: params[:bike_type]
     )
