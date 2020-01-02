@@ -1,7 +1,7 @@
 @rides.map do |ride|
-  {
+  { 
     id: ride.id,
-    ride: ride.name,
+    ride: ride.name.titleize,
     date_time: ride.friendly_date_time,
     starting_point: ride.starting_point,
     starting_point_lat: ride.starting_point_lat,

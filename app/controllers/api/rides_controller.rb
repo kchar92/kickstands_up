@@ -17,7 +17,6 @@
     end_coordinates = Geocoder.coordinates(end_point)
     end_latitude = end_coordinates[0]
     end_longitude = end_coordinates[1]
-
     # calculate distance between
     distance = Geocoder::Calculations.distance_between(start_coordinates, end_coordinates)
 
@@ -31,7 +30,8 @@
       end_point_lat: end_latitude,
       end_point_long: end_longitude,
       ride_distance: distance,
-      bike_type: params[:bike_type]
+      bike_type: params[:bike_type],
+
     )
     if @ride.save
       render 'show.json.jb'

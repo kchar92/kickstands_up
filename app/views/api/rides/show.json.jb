@@ -1,6 +1,6 @@
 {
   id: @ride.id,
-  name: @ride.name,
+  name: @ride.name.titleize,
   date_time: @ride.friendly_date_time,
   starting_point: @ride.starting_point,
   starting_point_lat: @ride.starting_point_lat,
