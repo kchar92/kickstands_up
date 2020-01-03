@@ -1,10 +1,6 @@
 class Station < ApplicationRecord
   has_many :ride_stations
   has_many :rides, through: :ride_stations
-
-  def gas
-    
-  end
   
   def address
     [street_address, city, state].compact.join(', ')
