@@ -8,6 +8,6 @@
   end_point: @ride.end_point,
   end_point_lat: @ride.end_point_lat,
   end_point_long: @ride.end_point_long,
-  distance: @ride.miles,
-  bike_type: @ride.bike_type
+  # distance: @ride.miles,
+  bike_type: @ride.bike_type.titleize
 }

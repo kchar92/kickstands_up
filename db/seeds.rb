@@ -29,10 +29,11 @@ while i <= 28
   octane = stations[i].elements[3].text
   phone = stations[i].elements[5].text
   state = "CA"
-  coordinates = Geocoder.coordinates(station_address)
-  lat = coordinates[0]
-  lng = coordinates[1]
-  station = Station.new(name: name, street_address: station_address, city: city, latitude: lat, longitude: lng, brand: brand, octane: octane, phone_number: phone, state: state)
-  p station
+  url = "http://www.mapquestapi.com/geocoding/v1/address?key=MAPQUESTKEYHERE!!!&street=#{station_address}&city=#{city}&state=#{state}"
+  response = HTTParty.get(url)
+  lat = response['results'][0]['locations'][0]['latLng']['lat']
+  lng = response['results'][0]['locations'][0]['latLng']['lng']
+  station = Station.create(name: name, street_address: station_address, city: city, latitude: lat, longitude: lng, brand: brand, octane: octane, phone_number: phone, state: state)
   i += 1
 end
+
