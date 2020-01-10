@@ -6,7 +6,7 @@ class Ride < ApplicationRecord
   has_many :comments
  
   def friendly_date_time
-    date_time.strftime("%A, %d %b %Y %l:%M %p")
+    date_time.strftime("%B %e %Y %l:%M %p %A")
   end
 
   def miles

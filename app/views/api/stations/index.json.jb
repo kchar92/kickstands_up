@@ -1,13 +1,13 @@
 @stations.map do |station|
   {
     name: station.name,
-    address: station.address,
-    # city: station.city,
-    # state: station.state,
+    street_address: station.street_address,
+    city: station.city,
+    state: station.state,
     brand: station.brand,
     octane: station.octane,
     phone_number: station.phone_number,
-    latitude: station.coordinates[0],
-    longitude: station.coordinates[1]
+    lat: station.lat,
+    lng: station.lng
   }
 end
