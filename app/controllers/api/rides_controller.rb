@@ -60,4 +60,10 @@
     ride.destroy
     render json: {message: "Ride destroyed"}
   end
+  def route
+    @response = HTTParty.get("https://maps.googleapis.com/maps/api/directions/json?
+origin=#{params[:starting_location]}&destination=#{params[:end_location]}
+&key=#{ENV["API_KEY"]}")
+    render 'route.json.jb'
+  end
 end

@@ -7,7 +7,6 @@
     brand: station.brand,
     octane: station.octane,
     phone_number: station.phone_number,
-    lat: station.lat,
-    lng: station.lng
+    position: {lat: station.lat, lng: station.lng}
   }
 end

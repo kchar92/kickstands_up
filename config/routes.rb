@@ -23,5 +23,8 @@ Rails.application.routes.draw do
 
     #stations
     get "/stations" => "stations#index"
+
+    #route
+    get "/route" => "rides#route"
   end
 end
