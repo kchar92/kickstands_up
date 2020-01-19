@@ -1,4 +1,5 @@
 {
+  creator: @ride.creator,
   id: @ride.id,
   name: @ride.name.titleize,
   date_time: @ride.date_time,

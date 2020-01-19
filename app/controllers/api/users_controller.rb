@@ -12,4 +12,8 @@ class Api::UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
   end
+  def show
+    @user = current_user
+    render 'show.json.jb'
+  end
 end

@@ -19,6 +19,7 @@
     end_longitude = end_coordinates[1]
 
     @ride = Ride.new(
+      creator: current_user.name,
       name: params[:name],
       date_time: params[:date_time],
       starting_point: params[:starting_point],
@@ -27,7 +28,6 @@
       end_point: params[:end_point],
       end_point_lat: end_latitude,
       end_point_long: end_longitude,
-      ride_distance: distance,
       bike_type: params[:bike_type],
 
     )

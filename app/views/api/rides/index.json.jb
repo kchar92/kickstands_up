@@ -1,8 +1,9 @@
 @rides.map do |ride|
   { 
+    creator: ride.creator,
     id: ride.id,
     ride: ride.name.titleize,
-    date_time: ride.date_time || ride.date_time + " UTC",
+    date_time: ride.date_time,
     starting_point: ride.starting_point,
     starting_point_lat: ride.starting_point_lat,
     starting_point_long: ride.starting_point_long,
