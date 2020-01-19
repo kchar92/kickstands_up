@@ -9,11 +9,11 @@ class Ride < ApplicationRecord
     date_time.strftime("%B %e %Y %l:%M %p %A")
   end
 
-  def miles
-    if ride_distance == 1
-      return "#{ride_distance} mile"
-    else
-      return "#{ride_distance} miles"
-    end
-  end
+  # def miles
+  #   if ride_distance == 1
+  #     return "#{ride_distance} mile"
+  #   else
+  #     return "#{ride_distance} miles"
+  #   end
+  # end
 end
