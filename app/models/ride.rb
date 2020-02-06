@@ -4,6 +4,7 @@ class Ride < ApplicationRecord
   has_many :ride_stations
   has_many :stations, through: :ride_stations
   has_many :comments
+  
   def friendly_date_time
     date_time.strftime("%B %e %Y %l:%M %p %A")
   end

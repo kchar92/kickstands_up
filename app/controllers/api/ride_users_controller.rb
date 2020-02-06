@@ -8,8 +8,7 @@ class Api::RideUsersController < ApplicationController
     render 'show.json.jb'
   end
   # def destroy
-  #   ride = Ride.find_by(id: params[:id])
-  #   ride_user = RideUser.where(user_id: current_user.id, ride_id: ride.id)
-  #   ride_user.destroy
+  #   @ride_user = RideUser.find_by(user_id: current_user.id, ride_id: params[:ride_id])
+  #   @ride_user.destroy
   # end
 end
