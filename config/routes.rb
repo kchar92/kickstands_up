@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
     #ride_users
     post "/ride_users" => "ride_users#create"
-    # delete "/ride_users/:id" => "ride_users#destroy"
+    delete "/ride_users/:id" => "ride_users#destroy"
 
     #stations
     get "/stations" => "stations#index"
